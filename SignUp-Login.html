@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HelPath </title>
+    <link rel="stylesheet" href="/assets/css/SignUp-Login.css">
+</head>
+<body>
+    <div class="main">
+
+        <input type="checkbox" id="chk" aria-hidden="true">
+    
+            <div class="signup">
+                <form action="proccess-signup.php" method="post"> 
+                    <label for="chk" aria-hidden="true"> Sign up </label>
+                    <input type="text" name="name" placeholder="Username" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="pswd" placeholder="Password" required>
+                    <input type="password" name="pswd_confirmation" placeholder="Password" required>
+
+                    <button class="button-signUp"> Sign up </button>
+                </form>
+            </div>
+    
+            <div class="login">
+                <form action="process-login.php" method="post">
+                    <label for="chk" aria-hidden="true"> Login </label>
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    
+                    <button class="button-login"> Login </button>
+                    <a href="ForgotPassword.html" class="password"> ¿Olvidaste tu contraseña? </a>
+                </form>
+            </div>
+    </div>
+</body>
+</html>
