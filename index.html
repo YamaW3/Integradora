@@ -1,77 +1,47 @@
-<!DOCTYPE html>  
-<html lang="es">  
-<head> 
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <link rel="stylesheet" href="/assets/css/main.css">  
-    <title> HelPath </title>  
-</head>  
-<body> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpath(index)</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
 
-    <nav class="navbar">  
-        <div> <img src="/images/logo/Helpath.svg" width="150"> </div>  
-        <ul class="nav-links" >  
-            <li><a href="#banner"> Home </a></li>  
-            <li><a href="#about"> About </a></li>
-            <li><a href="consult.html"> Consult </a></li>  
-            <li><a href="Pricing.html"> Pricing </a></li>  
-            <li><a href="#support"> Support </a></li>  
-        </ul>  
-    </nav>  
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Slide Navbar</title>
+    <link rel="stylesheet" type="text/css" href="slide navbar style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true">
     
-    <section id="banner">  
-        <div>
-            <video autoplay muted loop id="background-video">  
-                <source src="/images/background/sky.mp4" type="video/mp4">  
-            </video> 
+                <div class="signup">
+                    <form action="proccess-signup.php" method="post"> 
+                        <label for="chk" aria-hidden="true">Sign up</label>
+                        <input type="text" name="name" placeholder="user name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="password" name="pswd" placeholder="Password" required>
+                        <input type="password" name="pswd_confirmation" placeholder="Password" required>
+
+                        <button>Sign up</button>
+                    </form>
+                </div>
+    
+                <div class="login">
+                    <form action="process-login.php" method="post">
+                        <label for="chk" aria-hidden="true">Login</label>
+                        <input type="email" name="email" placeholder="Email" required="">
+                        <input type="password" name="pswd" placeholder="Password" required="">
+                        <button>Login</button>
+                        <a href="forgot-password.php"; id="forget_pswd">¿Olvidaste tu contraseña?</a>
+                    </form>
+                </div>
         </div>
-        <h2> HELPATH </h2>  
-        <p> Your ally in clear and precise diagnoses </p>  
-        <div>
-            <a href="SignUp-Login.html" class="button"> Start now!! </a>  
-        </div>  
-    </section>  
-    
-    <div class="box1" id="about"> <!-- Cuadro blanco debajo de la barra de navegación -->  
-        <p class="text"> Welcome to Helpath </p> 
-        <p class="text1"> Helpath is a tool aimed at the health sector to diagnose diseases <br> more easily, Helpath focuses on improving diagnostic efficiency and reducing <br> the burden on medical staff. </p> 
-    
-    </div>  
-
-    <section class="box3" id="support">  
-        <div> <h2 class="support2"> Contact With Us </h2></div>
-        <div class="form-container">
-            <form>
-                <label for="name"> Name </label>  
-                <input type="text" name="name" id="name" placeholder="Enter your Name" required />
-
-                <label for="message"> Message </label>  
-                <textarea name="message" id="message" placeholder="Type your message" required></textarea>  
-
-                <input type="submit" value="Send" class="fit"> 
-            </form>
-
-            <form>  
-                <label for="email" class="suport-text">Email</label>  
-                <input type="email" id="email" placeholder="Enter your Email" required>  
-            </form> 
-        </div>
-    </section> 
-
-    <footer id="footer" class="footer">
-        <ul class="icons">
-            <li><a href="https://x.com/byHelPath"><img src="/images/icons/twitter.svg"><span class="label"></span></a></li>
-            <li><a href="https://web.facebook.com/profile.php?id=61568232181181"><img src="/images/icons/facebook.svg"><span class="label"></span></a></li>
-            <li><a href="https://www.instagram.com/helpathito/"><img src="/images/icons/instagram.svg"><span class="label"></span></a></li>
-            <li><a href="https://www.youtube.com/@HELPATH"><img src="/images/icons/youtube.svg"><span class="label"></span></a></li>
-        </ul>
-        <ul class="copyright">
-            <li> &copy; Helpath. All rights reserved.</li><li><a href="AboutUs.html"> About us </a></li>
-        </ul>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/Consult.js"></script>
-
-</body>  
+    </body>
+    </html>
+</body>
 </html>
