@@ -8,3 +8,4 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled'); // Remueve la clase cuando está en la parte superior  
     }  
 });
+

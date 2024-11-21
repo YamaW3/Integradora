@@ -1,0 +1,304 @@
+body {  
+    margin: 0;  
+    font-family: Verdana;
+}  
+
+html {  
+    scroll-behavior: smooth;  
+} 
+
+.navbar {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    background-color: #1b4aa200;
+    padding: 10px 40px;  
+    position: fixed; /* Fija la barra de navegación */  
+    width: 100%; /* Asegura que ocupa todo el ancho */  
+    top: 0; /* Se posiciona en la parte superior */ 
+    z-index: 1000; /* Asegura de que sea mayor que otros elementos */
+}
+
+/* Añadir esta clase para el efecto al hacer scroll */  
+.navbar.scrolled {  
+    background-color: #4c7bc1; /* Cambia el color de fondo */  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.272); /* Añade sombra */  
+    transition: background-color 0.9s, box-shadow 0.7s; /* Transiciones suaves */  
+}
+
+.box1 {  
+    position: absolute; /* Permite posicionar el cuadro de manera independiente */  
+    top: 510px; /* Espacio desde la parte superior de la pantalla */  
+    left: 50%; /* Centrar en la pantalla */  
+    transform: translateX(-50%); /* Ajustar el centrado */  
+    width: 700px; /* Ancho del cuadro */  
+    height: 550px;
+    padding: 50px; /* Espaciado interno */  
+    background-color: white; /* Color de fondo */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */  
+    z-index: 900; /* Asegura que el cuadro esté encima de otros elementos, pero debajo del navbar */
+    border-radius: 15px;
+}  
+
+.text {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #4c7bc1dd;
+}
+
+.text1 {
+    text-align: center;
+    color: #000000ac;
+}
+
+.support2 {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-size: 35px;  
+    text-align: center;  
+    font-weight: bold; 
+    color: #4c7bc1dd;
+} 
+
+.form-container {  
+    display: flex; /* Usar Flexbox para alinear formularios */  
+    justify-content: space-between; /* Espacio entre formularios */  
+}
+
+form {  
+    width: 40%;  
+} 
+
+label {  
+    font-weight: bold;  
+    margin-bottom: 5px;  
+    color: #4c7bc171; /* Color de texto */  
+    display: block; /* Asegura que el label ocupe toda la línea */  
+}   
+
+/* Section Styles */  
+.box3 {
+    position: absolute; /* Permite posicionar el cuadro de manera independiente */  
+    top: 1250px; /* Espacio desde la parte superior de la pantalla */  
+    left: 50%; /* Centrar en la pantalla */  
+    transform: translateX(-50%); /* Ajustar el centrado */  
+    width: 700px; /* Ancho del cuadro */  
+    height: 415px;
+    padding: 50px; /* Espaciado interno */  
+    background-color: white; /* Color de fondo */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */  
+    z-index: 900; /* Asegura que el cuadro esté encima de otros elementos, pero debajo del navbar */  
+    border-radius: 15px;
+
+}  
+
+.support-text { 
+    font-size: 23px;
+    text-align: center;  
+    margin-bottom: 20px;  
+}  
+
+/* Form Styles */  
+form div {  
+    margin-bottom: 15px;  
+}   
+
+input[type="email"],  
+textarea {  
+    padding: 12px;  
+    border: 1px solid #2246523f; /* Borde sutil */  
+    border-radius: 8px;  
+    margin-bottom: 15px;  
+    margin-left: 0px;
+    font-size: 16px;  
+    background-color: #ffffff; /* Fondo de los inputs */  
+    color: #000000ac; /* Color del texto en inputs */  
+    width: 245px; /* Ocupa todo el ancho del contenedor */  
+    height: 25px; /* Altura para input, ajusta según sea necesario */  
+    /* Para textarea, ajusta la altura por separado */  
+}  
+
+input[type="text"], textarea {
+    padding: 12px;  
+    border: 1px solid #2246523f; /* Borde sutil */  
+    border-radius: 8px;  
+    margin-bottom: 15px;  
+    font-size: 16px;  
+    background-color: #ffffff; /* Fondo de los inputs */  
+    color: #000000ac; /* Color del texto en inputs */  
+    width: 300px; /* Ocupa todo el ancho del contenedor */  
+    height: 25px; /* Altura para input, ajusta según sea necesario */  
+    /* Para textarea, ajusta la altura por separado */  
+}
+
+
+input[type="submit"] {  
+    background-color: #4c7bc1dd; /* Color del botón */  
+    color: white;  
+    padding: 12px;  
+    border: none;  
+    border-radius: 8px;  
+    cursor: pointer;  
+    font-size: 16px;  
+    transition: background-color 0.3s, transform 0.3s; /* Efecto de transición */  
+}  
+
+input[type="submit"]:hover {  
+    background-color: #4c7bc179; /* Color más oscuro al pasar el mouse */  
+    transform: translateY(-2px); /* Desplazamiento sutil al pasar el mouse */  
+}  
+
+textarea {  
+    width: 670px; /* Ancho fijo del área de texto */  
+    height: 100px; /* Altura del área de texto */  
+    resize: vertical; /* Permitir el redimensionamiento vertical */  
+    padding: 10px; /* Espaciado interno */  
+    border: 1px solid #ccc; /* Borde opcional */  
+    border-radius: 8px; /* Bordes redondeados */  
+    font-size: 16px; /* Tamaño de fuente */  
+    position: relative; /* Esto permitirá mover el textarea */  
+}
+
+input::placeholder,  
+textarea::placeholder {  
+    color: #c0c0c0b1; /* Color del placeholder */  
+}  
+
+input:focus,  
+textarea:focus {  
+    border-color: #4c7bc1dd; /* Color de borde al enfocar */  
+    outline: none;  
+}
+
+.nav-links {  
+    list-style-type: none;  
+    display: flex;  
+    margin: 0;  
+    padding: 0;
+    margin-right: 60px;  
+}  
+
+.nav-links li {  
+    margin: 0 15px;  
+}  
+
+.nav-links a {  
+    color: white;  
+    text-decoration: none;  
+    font-size: 18px;  
+    transition: color 0.3s;  
+}  
+
+.nav-links a:hover {  
+    color: #b0d0ff; /* Color al pasar el ratón */  
+    transition-delay: 0.1s; 
+}
+
+#banner {  
+    position: relative;  
+    color: #fff;  
+    padding: 12em 0 20em 0;  
+    text-align: center;  
+    font-size: 17px;  
+    overflow: hidden; /* Asegura que el contenido no se desborde */  
+}  
+
+#background-video {  
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    width: 100%;  
+    height: 100%;  
+    width: auto;  
+    height: auto;  
+    z-index: -1; /* Asegura que el video quede detrás del contenido */  
+    transform: translate(-50%, -50%);  
+}  
+
+
+.button {
+    text-decoration: none;
+    background-color: #ffffffba;
+    border-radius: 6px;
+    border: 0;
+    color: #686868;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 34px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 2px;
+}
+
+.button:hover {  
+    background-color: #ffffffe7; /* Color de fondo iluminado al pasar el ratón */  
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */  
+}
+
+#footer {  
+    background-color: #4c7bc1; /* Color de fondo oscuro */  
+    color: #b0d0ff; /* Color del texto */  
+    text-align: center; /* Texto centrado */  
+    padding: 15px 0;
+    position: relative; /* Posicionamiento normal */  
+    bottom: 0; /* Ubicación en la parte inferior */  
+    width: 100%; /* Ancho completo */  
+    font-family: Verdana; /* Fuente del footer */  
+}  
+   
+/* Estilo para los íconos de redes sociales */  
+.icons {  
+    list-style: none; /* Sin puntos de lista */  
+    padding: 0; /* Sin padding */  
+    margin: 0; /* Sin margenes */  
+}  
+   
+.icons li {  
+    display: inline-block; /* Mostrar íconos en línea */  
+    margin: 10px 15px 4px; /* Espaciado entre íconos */  
+}  
+   
+/* Estilo para los íconos (imágenes) */  
+.icons img {  
+    width:30px; /* Ajusta el tamaño de los íconos */  
+    height: auto; /* Mantiene la proporción */  
+}  
+   
+/* Estilo para la sección de derechos de autor */  
+.copyright {  
+    list-style: none; /* Sin puntos de lista */  
+    padding: 0; /* Sin padding */  
+    margin-top: 20px; /* Espaciado superior */  
+}  
+   
+.copyright li {  
+    display: inline; /* Mostrar en línea */  
+    margin:010px; /* Espaciado entre elementos */  
+}  
+   
+.copyright a {  
+    color: #b0d0ff; /* Color de los enlaces */  
+    text-decoration: none; /* Sin subrayado */  
+}  
+   
+.copyright a:hover {  
+    text-decoration: none; /* Subrayar al pasar el ratón */  
+    color: #98c1ff;
+}
+
+.footer{
+    position: absolute; /* Permite posicionar el cuadro de manera independiente */  
+    top: 1150px; /* Espacio desde la parte superior de la pantalla */  
+    left: 50%; /* Centrar en la pantalla */  
+    transform: translateX(-50%); /* Ajustar el centrado */  
+    width: 100%; /* Ancho del cuadro */  
+    height: 90px;
+    background-color: white; /* Color de fondo */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */  
+    z-index: 990; /* Asegura que el cuadro esté encima de otros elementos, pero debajo del navbar */  
+}

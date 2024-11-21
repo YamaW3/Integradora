@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/Pricing.css">
+    <link rel="stylesheet" href="/assets/css/modal.css">
+    <title> Our Prices | HelPath</title>
+</head>
+<body>
+
+<nav class="navbar">
+    <div> <img src="/images/logo/Helpath.svg" width="150"> </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="consult.html">Consult</a></li>
+        <li><a href="Pricing.html">Pricing</a></li>
+        <li><a href="index.html">Support</a></li>
+    </ul>
+</nav>
+
+<div class="box2" id="our-plans">
+    <h2 class="plans">Our Plans</h2>
+    <div class="pricing-table">
+        <div class="pricing-card">
+            <h2>Basic Plan</h2>
+            <div class="price">Free</div>
+            <ul class="features">
+                <li>✔ 12 symptoms</li>
+                <li>✔ 30 diseases</li>
+                <li>✔ 30 medicines</li>
+            </ul>
+            <button class="button-plans">START!!</button>
+        </div>
+
+        <div class="pricing-card">
+            <h2>Premium Plan</h2>
+            <div class="price">$5/month</div>
+            <ul class="features">
+                <li>✔ 30 symptoms</li>
+                <li>✔ 50 diseases</li>
+                <li>✔ 50 medicines</li>
+            </ul>
+            <button class="button-plans">START!!</button>
+        </div>
+    </div>
+</div>
+
+<footer id="footer" class="footer">
+    <ul class="icons">
+        <li><a href="https://x.com/byHelPath"><img src="/images/icons/twitter.svg"><span class="label"></span></a></li>
+        <li><a href="https://web.facebook.com/profile.php?id=61568232181181"><img src="/images/icons/facebook.svg"><span class="label"></span></a></li>
+        <li><a href="https://www.instagram.com/helpathito/"><img src="/images/icons/instagram.svg"><span class="label"></span></a></li>
+        <li><a href="https://www.youtube.com/@HELPATH"><img src="/images/icons/youtube.svg"><span class="label"></span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; Helpath. All rights reserved.</li>
+        <li><a href="AboutUs.html">About us</a></li>
+    </ul>
+</footer>
+
+<!-- Modal for Payment Form -->
+<div id="Opened" class="pricing-box">
+    <div class="box-content">
+        <span class="Close">&times;</span>
+        <div>
+            <form>
+                <div>
+                    <div>
+                        <h3>Payment</h3>
+                        <div>
+                            <label for="name">Card Accepted: <br> </label>
+                            <img src="https://i.ibb.co/X38b5PF/card-img.png" alt="">
+                        </div>
+                        <div>
+                            <label for="cardName">Name On Card:</label>
+                            <input type="text" id="cardName" placeholder="Enter card name" required>
+                        </div>
+                        <div>
+                            <label for="cardNum">Credit Card Number:</label>
+                            <input type="text" id="cardNum" placeholder="1111-2222-3333-4444" maxlength="19" required>
+                        </div>
+                        <div>
+                            <label>Exp Month:</label>
+                            <select>
+                                <option>Choose month</option>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                        </div>
+                        <div>
+                            <div>
+                                <label>Exp Year:</label>
+                                <select>
+                                    <option>Choose Year</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="cvv">CVV</label>
+                                <input type="number" id="cvv" placeholder="1234" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Proceed to Checkout" class="submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/Pricing.js"></script>
+
+</body>
+</html>
+
