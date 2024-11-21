@@ -1,5 +1,3 @@
-
-
 $(".email-signup").hide();
 $("#signup-box-link").click(function(){
   $(".email-login").fadeOut(100);
