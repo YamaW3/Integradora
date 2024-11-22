@@ -420,3 +420,70 @@ html {
     background-color: #578cdcdd; 
     transform: translateY(-2px);
 }
+
+.menu-icon {
+    display: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    padding-right: 55px;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 230px; /* Ajuste el ancho del menú */
+        background-color: #cadfff30;
+        position: absolute;
+        top: 63px;
+        right: 35px;
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        z-index: 999;
+        overflow: hidden; /* Elimina el desbordamiento */
+        backdrop-filter: blur(1px);
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.5s ease-in-out; /* Animación de aparición */
+    }
+
+    .nav-links li {
+        width: 200px;
+        text-align: center;
+        padding: 12px 0px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea separadora suave */
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none; /* Elimina la línea del último elemento */
+    }
+
+    .nav-links a {
+        padding: 14px 20px;
+        font-size: 18px;
+        color: white; /* Color de los enlaces */
+        transition: background-color 0.3s, color 0.3s; /* Transición suave para el color y fondo */
+    }
+
+    .nav-links a:hover {
+        color: #b0d0ff; /* Color del texto al pasar el ratón */
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 20px; /* Tamaño del ícono */
+        color: white;
+        cursor: pointer;
+        padding-right: 60px;
+    }
+}
+
+/* Animación para la aparición del menú */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
