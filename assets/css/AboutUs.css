@@ -69,6 +69,7 @@ body {
     list-style: none; /* Sin puntos de lista */  
     padding: 0; /* Sin padding */  
     margin-top: 20px; /* Espaciado superior */  
+    color: #b0d0ff;
 }  
    
 .copyright li {  
@@ -88,7 +89,7 @@ body {
 
 .footer{
     position: absolute; /* Permite posicionar el cuadro de manera independiente */  
-    top: 800px; /* Espacio desde la parte superior de la pantalla */  
+    top: 70px; /* Espacio desde la parte superior de la pantalla */  
     left: 50%; /* Centrar en la pantalla */  
     transform: translateX(-50%); /* Ajustar el centrado */  
     width: 100%; /* Ancho del cuadro */  
@@ -108,6 +109,35 @@ body {
     width: 100%; /* Ancho completo */  
     font-family: Verdana; /* Fuente del footer */  
 }  
+
+/* curriculum 1, 2, 3. */
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.header-info h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.header-info p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #555;
+}
 
 /* curriculum1 */
 
@@ -155,7 +185,7 @@ ul li {
     margin-bottom: 10px;
 }  
 
-.empresa {  
+.job {  
     font-weight: bold;  
     color: #151929;
 } 
@@ -223,7 +253,7 @@ th {
 /* curriculum2 */
 
 .box2 {
-    padding-top: 20px;
+    padding-top: 60px;
     display: flex;
     justify-content: center; /* Center the container */
     align-items: center;
@@ -241,44 +271,6 @@ th {
     box-sizing: border-box; /* Include padding and border in width */
 }
 
-.header {
-    text-align: center;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 20px;
-}
-
-.profile-img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.header-info h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #333;
-}
-
-.header-info p {
-    margin: 5px 0;
-    font-size: 1.2em;
-    color: #555;
-}
-
-.section {
-    margin-bottom: 30px;
-}
-
-.section h2 {
-    margin-bottom: 15px;
-    font-size: 1.8em;
-    color: #666;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-}
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {
@@ -345,6 +337,7 @@ th {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */  
     z-index: 900; /* Asegura que el cuadro esté encima de otros elementos, pero debajo del navbar */
     border-radius: 15px;
+    text-align: center;
 }
 
 .text {
@@ -352,4 +345,78 @@ th {
     font-size: 35px;
     font-weight: bold;
     color: #4c7bc1dd;
+}
+
+/* curriculum3 */
+
+.box3 {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center; /* Centrar el contenedor */
+    align-items: center;
+    min-height: 100vh; /* Altura completa de la ventana */
+}
+
+.container3 {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    box-sizing: border-box; /* Incluir padding y border en el ancho */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .container3 {
+        width: 90%; /* Ajustar el ancho para pantallas más pequeñas */
+    }
+
+    .profile-img3 {
+        width: 60px; /* Reducir el tamaño de la imagen para pantallas más pequeñas */
+        height: 60px;
+    }
+
+    .header-info3 h1 {
+        font-size: 1.5em; /* Ajustar el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .header-info3 p {
+        font-size: 1em; /* Ajustar el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .section3 h2 {
+        font-size: 1.5em; /* Ajustar el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .job3 h3, .education3 h3 {
+        font-size: 1.2em; /* Ajustar el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .job3 p, .education3 p {
+        font-size: 0.9em; /* Ajustar el tamaño de la fuente para pantallas más pequeñas */
+    }
+}
+
+html {  
+    scroll-behavior: smooth;  
+} 
+
+.button{
+    display:inline-block; 
+    padding: 15px 25px; 
+    margin: 10px; 
+    font-size: 16px; 
+    color: #fff; 
+    background-color: #4c7bc1dd; 
+    text-decoration: none; 
+    border-radius: 8px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.button:hover{ 
+    background-color: #578cdcdd; 
+    transform: translateY(-2px);
 }
