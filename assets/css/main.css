@@ -192,7 +192,7 @@ textarea:focus {
 }  
 
 .nav-links a:hover {  
-    color: #b0d0ff; /* Color al pasar el ratón */  
+    color: #284570; /* Color al pasar el ratón */  
     transition-delay: 0.1s; 
 }
 
@@ -317,12 +317,12 @@ textarea:focus {
         display: none;
         flex-direction: column;
         width: 230px; /* Ajuste el ancho del menú */
-        background-color: #cadfff30;
+        background-color: #cadfff45;
         position: absolute;
         top: 63px;
         right: 35px;
         border-radius: 10px; /* Bordes redondeados */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.308); /* Sombra suave */
         z-index: 999;
         overflow: hidden; /* Elimina el desbordamiento */
         backdrop-filter: blur(1px);
@@ -337,8 +337,9 @@ textarea:focus {
         width: 200px;
         text-align: center;
         padding: 12px 0px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea separadora suave */
+        border-bottom: 1px solid rgba(185, 185, 185, 0.443); /* Línea separadora suave */
     }
+
 
     .nav-links li:last-child {
         border-bottom: none; /* Elimina la línea del último elemento */
@@ -352,7 +353,7 @@ textarea:focus {
     }
 
     .nav-links a:hover {
-        color: #b0d0ff; /* Color del texto al pasar el ratón */
+        color: #284570; /* Color del texto al pasar el ratón */
     }
 
     .menu-icon {
