@@ -435,15 +435,14 @@ html {
         display: none;
         flex-direction: column;
         width: 230px; /* Ajuste el ancho del menú */
-        background-color: #cadfff30;
+        background-color: #4c7bc15d;
         position: absolute;
-        top: 63px;
-        right: 35px;
+        top: 70px;
+        right: 24px;
         border-radius: 10px; /* Bordes redondeados */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
         z-index: 999;
         overflow: hidden; /* Elimina el desbordamiento */
-        backdrop-filter: blur(1px);
     }
 
     .nav-links.active {
@@ -470,7 +469,7 @@ html {
     }
 
     .nav-links a:hover {
-        color: #b0d0ff; /* Color del texto al pasar el ratón */
+        color: #dceaff; /* Color del texto al pasar el ratón */
     }
 
     .menu-icon {
