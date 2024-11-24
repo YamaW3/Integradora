@@ -136,3 +136,25 @@ input {
 .password:hover{
     color: #8ea6ca;
 }
+
+/* Estilo general para el botón return */
+.return {
+    color: #4377c5; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 12px 24px; /* Relleno interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none;
+    display: block; /* Display block para facilitar el centrado */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 20px auto; /* Márgenes para centrar el botón */
+    cursor: pointer; /* Indicador de cursor */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+    max-width: 200px; /* Ancho máximo del botón */
+}
+
+/* Efecto hover para el botón */
+.return:hover {
+    color: #8ea6ca;
+    text-decoration: underline;
+}
