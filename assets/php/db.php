@@ -2,7 +2,7 @@
 $host = 'localhost';
 $dbname = 'helpath';
 $username = 'root';
-$password = '230887'; // Reemplaza con tu contraseña de MySQL
+$password = '141506'; // Reemplaza con tu contraseña de MySQL
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
