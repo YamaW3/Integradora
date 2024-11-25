@@ -3,12 +3,12 @@
 session_start();
 
 // Conecta a la base de datos
-$servername = 'localhost';
-$dbname = 'helpath';
-$username = 'root';
-$password = '141506'; // Reemplaza con tu contraseña de MySQL
+$host = '127.0.0.1:3306';
+$dbname = 'u207088786_Seguridad';
+$username = 'u207088786_ItsTITIN';
+$password = 'Ju230905'; //  // Reemplaza con tu contraseña de MySQL
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($host, $username, $password, $dbname);
 
 // Verifica la conexión
 if ($conn->connect_error) {
