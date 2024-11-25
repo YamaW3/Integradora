@@ -12,11 +12,11 @@
         <div> <img src="/images/logo/Helpath.svg" width="150"> </div>  
         <div class="menu-icon" onclick="toggleMenu()"> ☰ </div>
         <ul class="nav-links" >  
-            <li><a href="#banner"> Home </a></li>  
-            <li><a href="#about"> About </a></li>
+            <li><a href="/index.html"> Home </a></li>  
+            <li><a href="/index.html"> About </a></li>
             <li><a href="/assets/html/consult.html"> Consult </a></li>  
             <li><a href="/assets/html/Pricing.html"> Pricing </a></li>  
-            <li><a href="#support"> Support </a></li>  
+            <li><a href="/index.html"> Support </a></li>  
         </ul>  
     </nav> 
 
