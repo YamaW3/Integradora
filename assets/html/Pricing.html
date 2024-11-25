@@ -9,18 +9,25 @@
 </head>
 <body>
 
-<nav class="navbar">
-    <div> <img src="/images/logo/Helpath.svg" width="150"> </div>
-    <div class="menu-icon" onclick="toggleMenu()"> ☰ </div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">About</a></li>
-        <li><a href="consult.html">Consult</a></li>
-        <li><a href="Pricing.html">Pricing</a></li>
-        <li><a href="index.html">Support</a></li>
-    </ul>
-</nav>
-
+    <nav class="navbar">
+        <div> <img src="/images/logo/Helpath.svg" width="150"> </div>
+        <div class="menu-icon" onclick="toggleMenu()"> ☰ </div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html">About</a></li>
+            <li><a> Consult </a></li>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="/assets/php/FreeConsult.php"> Basic Plan </a></li>
+                        <li><a href="/assets/php/PremiumConsult.php"> Premium Plan </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="/assets/html/Pricing.html">Pricing</a></li>
+            <li><a href="/index.html">Support</a></li>
+        </ul>
+    </nav>
+    
 <div class="box2" id="our-plans">
     <h2 class="plans">Our Plans</h2>
     <div class="pricing-table">
