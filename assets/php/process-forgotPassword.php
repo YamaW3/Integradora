@@ -8,7 +8,7 @@ $dbname = 'u207088786_Seguridad';
 $username = 'u207088786_ItsTITIN';
 $password = 'Ju230905'; //  // Reemplaza con tu contraseña de MySQL
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($host, $username, $password, $dbname);
 
 // Verifica la conexión
 if ($conn->connect_error) {
