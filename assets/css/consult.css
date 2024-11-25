@@ -113,7 +113,6 @@ html {
     padding-right: 55px;
 }
 
-
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -155,7 +154,7 @@ html {
     }
 
     .nav-links a:hover {
-        color: #91acd5; /* Color del texto al pasar el ratón */
+        color: #000000; /* Color del texto al pasar el ratón */
     }
 
     .menu-icon {
