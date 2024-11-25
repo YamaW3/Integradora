@@ -318,13 +318,13 @@ textarea:focus {
         width: 230px; /* Ajuste el ancho del menú */
         background-color: #cadfff45;
         position: absolute;
-        top: 63px;
+        top: 80px;
         right: 35px;
         border-radius: 10px; /* Bordes redondeados */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.308); /* Sombra suave */
         z-index: 999;
         overflow: hidden; /* Elimina el desbordamiento */
-        backdrop-filter: blur(1px);
+        backdrop-filter: blur(5px);
     }
 
     .nav-links.active {
@@ -336,7 +336,7 @@ textarea:focus {
         width: 200px;
         text-align: center;
         padding: 12px 0px;
-        border-bottom: 1px solid rgba(185, 185, 185, 0.443); /* Línea separadora suave */
+        border-bottom: 1px solid rgba(150, 150, 150, 0.443); /* Línea separadora suave */
     }
 
 
@@ -347,12 +347,12 @@ textarea:focus {
     .nav-links a {
         padding: 14px 20px;
         font-size: 18px;
-        color: white; /* Color de los enlaces */
+        color: #284570; /* Color de los enlaces */
         transition: background-color 0.3s, color 0.3s; /* Transición suave para el color y fondo */
     }
 
     .nav-links a:hover {
-        color: #284570; /* Color del texto al pasar el ratón */
+        color: #91acd5; /* Color del texto al pasar el ratón */
     }
 
     .menu-icon {
