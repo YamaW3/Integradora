@@ -87,6 +87,71 @@
         <div class="container2"> 
             <h2> Possible diseases </h2>
             <div id="resultadosEnfermedades">
+                <?php
+                // Conexión a la base de datos
+                $host = '127.0.0.1:3306';
+                $dbname = 'Seguridad';
+                $username = 'ItsTITIN';
+                $password = 'Ju230905'; // Reemplaza con tu contraseña de MySQL
+                $conexion = new mysqli($servername, $username, $password, $dbname);
+
+                // Verificar la conexión
+                if ($conexion->connect_error) {
+                    die("Conexión fallida: " . $conexion->connect_error);
+                }
+
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $symptoms = $_POST['Symptom'];
+
+                    if (!empty($symptoms)) {
+                        $symptomList = implode(",", $symptoms);
+
+                        // Consulta para obtener enfermedades
+                        $sqlEnfermedades = "SELECT e.id_enfermedad, e.enf_nombre_tecnico, e.enf_nombre_comun, e.enf_riesgo, COUNT(es.id_sintoma) AS coincidencias
+                                            FROM enfermedad e
+                                            JOIN enfermedad_sintoma es ON e.id_enfermedad = es.id_enfermedad
+                                            WHERE es.id_sintoma IN ($symptomList)
+                                            GROUP BY e.id_enfermedad, e.enf_nombre_tecnico, e.enf_nombre_comun, e.enf_riesgo
+                                            HAVING COUNT(es.id_sintoma) >= 2
+                                            ORDER BY coincidencias DESC";
+
+                        $resultadoEnfermedades = $conexion->query($sqlEnfermedades);
+
+                        if (!$resultadoEnfermedades) {
+                            die("Error en la consulta: " . $conexion->error);
+                        }
+
+                        echo "<table border='1'>
+                                <tr>
+                                    <th>ID Enfermedad</th>
+                                    <th>Nombre Técnico</th>
+                                    <th>Nombre Común</th>
+                                    <th>Riesgo</th>
+                                    <th>Coincidencias</th>
+                                </tr>";
+
+                        while ($value = $resultadoEnfermedades->fetch_assoc()) {
+                            $rowClass = '';
+                            if ($value['coincidencias'] = 5) {
+                                $rowClass = 'green';
+                            } elseif ($value['coincidencias'] == 4) {
+                                $rowClass = 'blue';
+                            }elseif ($value['coincidencias'] == 3) {
+                                    $rowClass = 'amarillo';
+                            }
+                            echo "<tr class='$rowClass'>
+                                    <td>" . $value['enf_nombre_tecnico'] . "</td>
+                                    <td>" . $value['enf_nombre_comun'] . "</td>
+                                    <td>" . $value['enf_riesgo'] . "</td>
+                                    <td>" . $value['coincidencias'] . "</td>
+                                </tr>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "Por favor, selecciona al menos un síntoma.";
+                    }
+                }
+                ?>
                 
             </div>
         </div>
@@ -96,6 +161,43 @@
         <div class="container3">
             <h2> Possible medications </h2>
             <div id="resultadosMedicamentos"></div>
+                <?php
+                if (!empty($symptoms)) {
+                    // Consulta para obtener medicamentos por enfermedad
+                    $sqlMedicamentos = "SELECT *
+                                        FROM(
+                                        SELECT e.enf_nombre_comun, m.medicamento_nombre, m.tipo
+                                        FROM enfermedad e
+                                        JOIN enfermedad_medicamento me ON e.id_enfermedad = me.id_enfermedad
+                                        JOIN medicamento m ON me.id_medicamento = m.id_medicamento
+                                        JOIN enfermedad_sintoma es ON e.id_enfermedad = es.id_enfermedad
+                                        WHERE es.id_sintoma IN ($symptomList)
+                                        GROUP BY e.enf_nombre_comun, m.medicamento_nombre, m.tipo
+                                        HAVING COUNT(es.id_sintoma) >= 2
+                                        ORDER BY coincidenciasMed Desc
+                                        ) AS Subconsulta;";
+                    $resultadoMedicamentos = $conexion->query($sqlMedicamentos);
+                    if (!$resultadoMedicamentos) {
+                        die("Error en la consulta: " . $conexion->error);
+                    }
+                    echo "<table border='1'>
+                            <tr>
+                                <th>Enfermedad</th>
+                                <th>Nombre Medicamento</th>
+                                <th>Tipo</th>
+                            </tr>";
+                    while ($value = $resultadoMedicamentos->fetch_assoc()) {
+                        echo "<tr>
+                                <td>" . $value['enf_nombre_comun'] . "</td>
+                                <td>" . $value['medicamento_nombre'] . "</td>
+                                <td>" . $value['tipo'] . "</td>
+                            </tr>";
+                    }
+                    echo "</table>";
+                    $conexion->close();
+                }
+            
+                ?>
         </div>
     </section>
 
