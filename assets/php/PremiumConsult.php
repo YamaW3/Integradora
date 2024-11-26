@@ -200,6 +200,18 @@
         </div>
     </section>
 
+    <footer id="footer" class="footer">
+        <ul class="icons">
+            <li><a href="https://x.com/byHelPath"><img src="/images/icons/twitter.svg"><span class="label"></span></a></li>
+            <li><a href="https://web.facebook.com/profile.php?id=61568232181181"><img src="/images/icons/facebook.svg"><span class="label"></span></a></li>
+            <li><a href="https://www.instagram.com/helpathito/"><img src="/images/icons/instagram.svg"><span class="label"></span></a></li>
+            <li><a href="https://www.youtube.com/@HELPATH"><img src="/images/icons/youtube.svg"><span class="label"></span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li> &copy; Helpath. All rights reserved.</li><li><a href="AboutUs.html"> About us </a>  | <a href="UsabilityEvaluation.html">Evaluation </a></li>
+        </ul>
+    </footer>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>

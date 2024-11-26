@@ -14,7 +14,7 @@
         <ul class="nav-links" >  
             <li><a href="/index.html"> Home </a></li>  
             <li><a href="/index.html"> About </a></li>
-            <li><a href="/assets/html/consult.html"> Consult </a></li>  
+            <li><a href="/assets/php/FreeConsult.php"> Consult </a></li>  
             <li><a href="/assets/html/Pricing.html"> Pricing </a></li>  
             <li><a href="/index.html"> Support </a></li>  
         </ul>  
@@ -32,7 +32,9 @@
         <p class="text">
             Basic Plan
         </p>
+        <a href="/Pricing.html" class="change"> Change Plan </a>
     </div>
+    
 
     <section class="box1">
     <div class="container1">
@@ -200,6 +202,18 @@
                 ?>
         </div>
     </section>
+
+    <footer id="footer" class="footer">
+        <ul class="icons">
+            <li><a href="https://x.com/byHelPath"><img src="/images/icons/twitter.svg"><span class="label"></span></a></li>
+            <li><a href="https://web.facebook.com/profile.php?id=61568232181181"><img src="/images/icons/facebook.svg"><span class="label"></span></a></li>
+            <li><a href="https://www.instagram.com/helpathito/"><img src="/images/icons/instagram.svg"><span class="label"></span></a></li>
+            <li><a href="https://www.youtube.com/@HELPATH"><img src="/images/icons/youtube.svg"><span class="label"></span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li> &copy; Helpath. All rights reserved.</li><li><a href="AboutUs.html"> About us </a>  | <a href="UsabilityEvaluation.html">Evaluation </a></li>
+        </ul>
+    </footer>
 
     <script src="/assets/js/main.js"></script>
 </body>
