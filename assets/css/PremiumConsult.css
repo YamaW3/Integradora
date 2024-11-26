@@ -371,3 +371,67 @@ h2.consult {
 .button-container button:hover{
     background-color: #4067a1;
 }
+
+#footer {  
+    background-color: #4c7bc1; /* Color de fondo oscuro */  
+    color: #b0d0ff; /* Color del texto */  
+    text-align: center; /* Texto centrado */  
+    padding: 15px 0;
+    position: relative; /* Posicionamiento normal */  
+    bottom: 0; /* Ubicación en la parte inferior */  
+    width: 100%; /* Ancho completo */  
+    font-family: Verdana; /* Fuente del footer */  
+}  
+   
+/* Estilo para los íconos de redes sociales */  
+.icons {  
+    list-style: none; /* Sin puntos de lista */  
+    padding: 0; /* Sin padding */  
+    margin: 0; /* Sin margenes */  
+}  
+   
+.icons li {  
+    display: inline-block; /* Mostrar íconos en línea */  
+    margin: 10px 15px 4px; /* Espaciado entre íconos */  
+}  
+   
+/* Estilo para los íconos (imágenes) */  
+.icons img {  
+    width:30px; /* Ajusta el tamaño de los íconos */  
+    height: auto; /* Mantiene la proporción */  
+}  
+   
+/* Estilo para la sección de derechos de autor */  
+.copyright {  
+    list-style: none; /* Sin puntos de lista */  
+    padding: 0; /* Sin padding */  
+    margin-top: 20px; /* Espaciado superior */  
+}  
+   
+.copyright li {  
+    display: inline; /* Mostrar en línea */  
+    margin:010px; /* Espaciado entre elementos */  
+}  
+   
+.copyright a {  
+    color: #b0d0ff; /* Color de los enlaces */  
+    text-decoration: none; /* Sin subrayado */  
+}  
+   
+.copyright a:hover {  
+    text-decoration: none; /* Subrayar al pasar el ratón */  
+    color: #98c1ff;
+}
+
+.footer{
+    position: absolute; /* Permite posicionar el cuadro de manera independiente */  
+    margin-top: 50px;
+    top: auto; /* Espacio desde la parte superior de la pantalla */  
+    left: 50%; /* Centrar en la pantalla */  
+    transform: translateX(-50%); /* Ajustar el centrado */  
+    width: 100%; /* Ancho del cuadro */  
+    height: 90px;
+    background-color: white; /* Color de fondo */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */  
+    z-index: 990; /* Asegura que el cuadro esté encima de otros elementos, pero debajo del navbar */  
+}
