@@ -1,7 +1,10 @@
 body {  
     margin: 0;  
     font-family: Verdana;
-}  
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} 
 
 html {  
     scroll-behavior: smooth;  
@@ -13,17 +16,16 @@ html {
     align-items: center;  
     background-color: #1b4aa200;
     padding: 10px 40px;  
-    position: fixed; /* Fija la barra de navegación */  
-    width: 100%; /* Asegura que ocupa todo el ancho */  
-    top: 0; /* Se posiciona en la parte superior */ 
-    z-index: 1000; /* Asegura de que sea mayor que otros elementos */
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
 }
 
-/* Añadir esta clase para el efecto al hacer scroll */  
 .navbar.scrolled {  
-    background-color: #4c7bc1; /* Cambia el color de fondo */  
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.272); /* Añade sombra */  
-    transition: background-color 0.9s, box-shadow 0.7s; /* Transiciones suaves */  
+    background-color: #4c7bc1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.272);  
+    transition: background-color 0.9s, box-shadow 0.7s; 
 }
 
 .nav-links {  
@@ -46,24 +48,46 @@ html {
 }  
 
 .nav-links a:hover {  
-    color: #b0d0ff; /* Color al pasar el ratón */  
+    color: #b0d0ff; 
     transition-delay: 0.1s; 
 }
 
+.main-content {
+    flex: 1;
+    padding-top: 60px; /* Espacio para la barra de navegación */
+}
+
 .box2 {  
-    position: absolute; /* Permite posicionar el cuadro de manera independiente */  
-    margin-top: 100px;
-    top: auto; /* Espacio desde la parte superior de la pantalla */  
-    left: 50%; /* Centrar en la pantalla */  
-    transform: translateX(-50%); /* Ajustar el centrado */  
-    width: 700px; /* Ancho del cuadro */  
-    height: auto; /* Ajustar según el contenido */  
-    padding: 50px; /* Espaciado interno */  
-    background-color: white; /* Color de fondo */  
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */  
-    z-index: 900; /* Asegura que el cuadro esté encima de otros elementos, pero debajo del navbar */  
+    margin: 100px auto;
+    width: 700px;
+    height: auto;
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 900;
     border-radius: 15px;  
-}  
+}
+
+@media (max-width: 1024px) {
+    .box2 {
+        width: 600px;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box2 {
+        width: 600px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box2 {
+        width: 300px;
+        padding: 20px;
+    }
+}
 
 .plans {  
     margin: 0;
@@ -77,6 +101,7 @@ html {
 
 .pricing-table {  
     display: flex;  
+    flex-direction: column;  
     justify-content: space-between;  
     padding: 10px;  
 }
@@ -87,16 +112,16 @@ html {
     border-radius: 5px;  
     padding: 20px;  
     flex: 1;  
-    margin: 0 25px;  
+    margin: 10px 0; 
     transition: transform 0.3s;  
     text-align: center;  
-    color:#4c7bc171;
+    color: #4c7bc171;
 }
 
 .pricing-card:hover {  
     transform: scale(1.02);
     background-color: #f9f9f9dd;  
-} 
+}
 
 .price {  
     font-size: 24px;  
@@ -112,6 +137,17 @@ html {
 
 .features li {  
     margin: 10px 0;  
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 768px) {
+    .pricing-table {
+        flex-direction: row;
+    }
+
+    .pricing-card {
+        margin: 0 10px; 
+    }
 }
 
 .button-plans {
@@ -133,67 +169,60 @@ html {
 } 
 
 .icons {  
-    list-style: none; /* Sin puntos de lista */  
-    padding: 0; /* Sin padding */  
-    margin: 0; /* Sin margenes */  
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
 }  
-   
+
 .icons li {  
-    display: inline-block; /* Mostrar íconos en línea */  
-    margin: 10px 15px 4px; /* Espaciado entre íconos */  
+    display: inline-block; 
+    margin: 10px 15px 4px; 
 }  
-   
-/* Estilo para los íconos (imágenes) */  
+
 .icons img {  
-    width:30px; /* Ajusta el tamaño de los íconos */  
-    height: auto; /* Mantiene la proporción */  
+    width: 30px; 
+    height: auto; 
 }  
-   
-/* Estilo para la sección de derechos de autor */  
+
 .copyright {  
-    list-style: none; /* Sin puntos de lista */  
-    padding: 0; /* Sin padding */  
-    margin-top: 20px; /* Espaciado superior */  
+    list-style: none; 
+    padding: 0; 
+    margin-top: 20px; 
 }  
-   
+
 .copyright li {  
-    display: inline; /* Mostrar en línea */  
-    margin:010px; /* Espaciado entre elementos */  
+    display: inline; 
+    margin: 0 10px; 
 }  
-   
+
 .copyright a {  
-    color: #b0d0ff; /* Color de los enlaces */  
-    text-decoration: none; /* Sin subrayado */  
+    color: #b0d0ff; 
+    text-decoration: none; 
 }  
-   
+
 .copyright a:hover {  
-    text-decoration: none; /* Subrayar al pasar el ratón */  
+    text-decoration: none; 
     color: #98c1ff;
 }
 
 .footer{
-    position: absolute; /* Permite posicionar el cuadro de manera independiente */  
-    top: 800px; /* Espacio desde la parte superior de la pantalla */  
-    left: 50%; /* Centrar en la pantalla */  
-    transform: translateX(-50%); /* Ajustar el centrado */  
-    width: 100%; /* Ancho del cuadro */  
+    background-color: white;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
     height: 90px;
-    background-color: white; /* Color de fondo */  
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */  
-    z-index: 990; /* Asegura que el cuadro esté encima de otros elementos, pero debajo del navbar */  
+    margin-top: auto;
+    z-index: 990;
 }
 
 #footer {  
-    background-color: #4c7bc1; /* Color de fondo oscuro */  
-    color: #b0d0ff; /* Color del texto */  
-    text-align: center; /* Texto centrado */  
+    background-color: #4c7bc1;
+    color: #b0d0ff;
+    text-align: center;
     padding: 15px 0;
-    position: relative; /* Posicionamiento normal */  
-    bottom: 0; /* Ubicación en la parte inferior */  
-    width: 100%; /* Ancho completo */  
-    font-family: Verdana; /* Fuente del footer */  
+    position: relative;
+    width: 100%;
+    font-family: Verdana;
 }  
-
 
 /* Estilos para el modal */
 .pricing-box {
@@ -236,7 +265,6 @@ html {
     cursor: pointer;
 }
 
-
 form {  
     margin-top: 20px;          
     max-width: 550px;               
@@ -244,36 +272,34 @@ form {
     margin-right: auto;         
 }  
 
- 
 input[type="text"],  
 input[type="number"],  
 select {  
     outline: none;
-    width: 100%;                    /* Ocupa todo el ancho disponible */  
-    padding: 8px;                   /* Espaciado interno */  
-    margin-bottom: 10px;            /* Espacio inferior entre campos */  
-    border: 1px solid #dddddd;      /* Borde claro */  
-    border-radius: 8px;             /* Bordes redondeados */  
-    box-sizing: border-box;         /* Incluye padding y borde en el ancho total */  
-    transition: border-color 0.3s, box-shadow 0.3s;  /* Transiciones suaves */  
-}  
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid #dddddd;
+    border-radius: 8px; 
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
 
-/* Estilo para el botón de envío */  
 input[type="submit"] { 
     outline: none; 
-    padding: 10px;                  /* Espaciado interno del botón */  
-    font-size: 16px;                /* Tamaño de la fuente */  
-    color: white;                   /* Color del texto */  
-    background-color: #4377c5;      /* Color de fondo */  
-    border: none;                   /* Sin borde */  
-    border-radius: 8px;             /* Bordes redondeados */  
-    cursor: pointer;                /* Cambia el cursor al pasar el ratón */  
-    transition: background-color 0.3s, transform 0.2s;  /* Efectos al pasar el ratón */  
-}  
+    padding: 10px; 
+    font-size: 16px; 
+    color: white;
+    background-color: #4377c5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+}
 
 input[type="submit"]:hover {  
-    background-color: #4377c5ba;     /* Color al pasar el ratón */  
-    transform: scale(1.02);         /* Leve aumento de tamaño al pasar el ratón */  
+    background-color: #4377c5ba; 
+    transform: scale(1.02); 
 }
 
 .menu-icon {
@@ -284,33 +310,32 @@ input[type="submit"]:hover {
     padding-right: 55px;
 }
 
-
 @media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 230px; /* Ajuste el ancho del menú */
+        width: 230px; 
         background-color: #cadfff45;
         position: absolute;
         top: 80px;
         right: 35px;
-        border-radius: 10px; /* Bordes redondeados */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.308); /* Sombra suave */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.308);
         z-index: 999;
-        overflow: hidden; /* Elimina el desbordamiento */
+        overflow: hidden; 
         backdrop-filter: blur(5px);
     }
 
     .nav-links.active {
         display: flex;
-        animation: fadeIn 0.5s ease-in-out; /* Animación de aparición */
+        animation: fadeIn 0.5s ease-in-out;
     }
 
     .nav-links li {
         width: 200px;
         text-align: center;
         padding: 12px 0px;
-        border-bottom: 1px solid rgba(150, 150, 150, 0.443); /* Línea separadora suave */
+        border-bottom: 1px solid rgba(150, 150, 150, 0.443);
     }
 
 
@@ -331,7 +356,7 @@ input[type="submit"]:hover {
 
     .menu-icon {
         display: block;
-        font-size: 20px; /* Tamaño del ícono */
+        font-size: 20px;
         color: white;
         cursor: pointer;
         padding-right: 60px;
@@ -340,50 +365,69 @@ input[type="submit"]:hover {
 
 /* Animación para la aparición del menú */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+from { opacity: 0; transform: translateY(-10px); }
+to { opacity: 1; transform: translateY(0); }
 }
 
-#box{  
-    position: relative;  
-    color: #fff;  
-    padding: 12em 0 20em 0;  
-    text-align: center;  
-    font-size: 17px;  
-    overflow: hidden; /* Asegura que el contenido no se desborde */  
-}  
+#box {  
+position: relative;
+color: #fff;
+padding: 12em 0 20em 0;
+text-align: center;
+font-size: 17px;
+overflow: hidden; 
+}
 
 #background-video {  
-    position: absolute;  
-    top: 50%;  
-    left: 50%;  
-    width: 100%;  
-    height: 100%;  
-    width: auto;  
-    height: auto;  
-    z-index: -1; /* Asegura que el video quede detrás del contenido */  
-    transform: translate(-50%, -50%);  
-}  
+position: absolute;
+top: 50%;
+left: 50%;
+width: 100%;
+height: 100%;
+width: auto;
+height: auto;
+z-index: -1;
+transform: translate(-50%, -50%);
+}
 
 .box {
-    position: absolute; 
-    top: 170px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 90vw; /* Usamos unidades relativas para mejor adaptación */
-    max-width: 700px;
-    height: auto; /* Ajuste automático de altura */
-    padding: 50px; 
-    background-color: white; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
-    z-index: 900; 
-    border-radius: 15px;
-    text-align: center;
+position: absolute;
+top: 170px;
+left: 50%;
+transform: translateX(-50%);
+width: 90vw;
+max-width: 700px;
+height: auto;
+padding: 50px;
+background-color: white;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+z-index: 900;
+border-radius: 15px;
+text-align: center;
 }
 
 .text {
-    text-align: center;
-    font-size: 45px; /* Usamos unidades relativas para la fuente */
-    font-weight: bold;
-    color: #4c7bc1dd;
+text-align: center;
+font-size: 45px;
+font-weight: bold;
+color: #4c7bc1dd;
+}
+
+
+@media (max-width: 1024px) {
+    .text {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 45px;
+    }
 }
