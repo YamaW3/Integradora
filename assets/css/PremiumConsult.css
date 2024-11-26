@@ -1,0 +1,373 @@
+body {  
+    margin: 0;  
+    font-family: Verdana;
+}  
+
+html {  
+    scroll-behavior: smooth;  
+} 
+
+.navbar {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    background-color: #1b4aa200;
+    padding: 10px 40px;  
+    position: fixed; /* Fija la barra de navegación */  
+    width: 100%; /* Asegura que ocupa todo el ancho */  
+    top: 0; /* Se posiciona en la parte superior */ 
+    z-index: 1000; /* Asegura de que sea mayor que otros elementos */
+}
+
+/* Añadir esta clase para el efecto al hacer scroll */  
+.navbar.scrolled {  
+    background-color: #4c7bc1; /* Cambia el color de fondo */  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.272); /* Añade sombra */  
+    transition: background-color 0.9s, box-shadow 0.7s; /* Transiciones suaves */  
+}
+
+.nav-links {  
+    list-style-type: none;  
+    display: flex;  
+    margin: 0;  
+    padding: 0;
+    margin-right: 60px;  
+}  
+
+.nav-links li {  
+    margin: 0 15px;  
+}  
+
+.nav-links a {  
+    color: white;  
+    text-decoration: none;  
+    font-size: 18px;  
+    transition: color 0.3s;  
+}  
+
+.nav-links a:hover {  
+    color: #b0d0ff; /* Color al pasar el ratón */  
+    transition-delay: 0.1s; 
+}
+
+.icons {  
+    list-style: none; /* Sin puntos de lista */  
+    padding: 0; /* Sin padding */  
+    margin: 0; /* Sin margenes */  
+}  
+   
+.icons li {  
+    display: inline-block; /* Mostrar íconos en línea */  
+    margin: 10px 15px 4px; /* Espaciado entre íconos */  
+}  
+   
+/* Estilo para los íconos (imágenes) */  
+.icons img {  
+    width:30px; /* Ajusta el tamaño de los íconos */  
+    height: auto; /* Mantiene la proporción */  
+}  
+   
+/* Estilo para la sección de derechos de autor */  
+.copyright {  
+    list-style: none; /* Sin puntos de lista */  
+    padding: 0; /* Sin padding */  
+    margin-top: 20px; /* Espaciado superior */  
+}  
+   
+.copyright li {  
+    display: inline; /* Mostrar en línea */  
+    margin:010px; /* Espaciado entre elementos */  
+}  
+   
+.copyright a {  
+    color: #b0d0ff; /* Color de los enlaces */  
+    text-decoration: none; /* Sin subrayado */  
+}  
+   
+.copyright a:hover {  
+    text-decoration: none; /* Subrayar al pasar el ratón */  
+    color: #98c1ff;
+}
+
+.footer{
+    position: absolute; /* Permite posicionar el cuadro de manera independiente */  
+    top: 1000px; /* Espacio desde la parte superior de la pantalla */  
+    left: 50%; /* Centrar en la pantalla */  
+    transform: translateX(-50%); /* Ajustar el centrado */  
+    width: 100%; /* Ancho del cuadro */  
+    height: 90px;
+    background-color: white; /* Color de fondo */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */  
+    z-index: 990; /* Asegura que el cuadro esté encima de otros elementos, pero debajo del navbar */  
+}
+
+#footer {  
+    background-color: #4c7bc1; /* Color de fondo oscuro */  
+    color: #b0d0ff; /* Color del texto */  
+    text-align: center; /* Texto centrado */  
+    padding: 15px 0;
+    position: relative; /* Posicionamiento normal */  
+    bottom: 0; /* Ubicación en la parte inferior */  
+    width: 100%; /* Ancho completo */  
+    font-family: Verdana; /* Fuente del footer */  
+}  
+
+.menu-icon {
+    display: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    padding-right: 55px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 230px; /* Ajuste el ancho del menú */
+        background-color: #cadfff45;
+        position: absolute;
+        top: 80px;
+        right: 35px;
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.308); /* Sombra suave */
+        z-index: 999;
+        overflow: hidden; /* Elimina el desbordamiento */
+        backdrop-filter: blur(5px);
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.5s ease-in-out; /* Animación de aparición */
+    }
+
+    .nav-links li {
+        width: 200px;
+        text-align: center;
+        padding: 12px 0px;
+        border-bottom: 1px solid rgba(150, 150, 150, 0.443); /* Línea separadora suave */
+    }
+
+
+    .nav-links li:last-child {
+        border-bottom: none; /* Elimina la línea del último elemento */
+    }
+
+    .nav-links a {
+        padding: 14px 20px;
+        font-size: 18px;
+        color: #284570; /* Color de los enlaces */
+        transition: background-color 0.3s, color 0.3s; /* Transición suave para el color y fondo */
+    }
+
+    .nav-links a:hover {
+        color: #000000; /* Color del texto al pasar el ratón */
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 20px; /* Tamaño del ícono */
+        color: white;
+        cursor: pointer;
+        padding-right: 60px;
+    }
+}
+
+/* Animación para la aparición del menú */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+#box{  
+    position: relative;  
+    color: #fff;  
+    padding: 12em 0 20em 0;  
+    text-align: center;  
+    font-size: 17px;  
+    overflow: hidden; /* Asegura que el contenido no se desborde */  
+}  
+
+#background-video {  
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    width: 100%;  
+    height: 100%;  
+    width: auto;  
+    height: auto;  
+    z-index: -1; /* Asegura que el video quede detrás del contenido */  
+    transform: translate(-50%, -50%);  
+}  
+
+.box {
+    position: absolute; 
+    top: 170px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 90vw; /* Usamos unidades relativas para mejor adaptación */
+    max-width: 700px;
+    height: auto; /* Ajuste automático de altura */
+    padding: 50px; 
+    background-color: white; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+    z-index: 900; 
+    border-radius: 15px;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+    font-size: 45px; /* Usamos unidades relativas para la fuente */
+    font-weight: bold;
+    color: #4c7bc1dd;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) {
+    .box {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .box {
+        padding: 20px;
+    }
+}
+
+.box1 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container1 {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.consult {
+    text-align: center;
+    font-size: 30px;
+}
+
+.box2 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container2 {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.box2 h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.box3 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container3 {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.box3 h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+h2.consult { 
+    text-align: center; 
+    color: #333; 
+} 
+
+.symptom-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+} 
+
+.column { 
+    flex: 1; 
+    margin: 10px; 
+    min-width: 200px; 
+} 
+
+.button-container { 
+    text-align: center; 
+    margin-top: 20px; 
+} 
+
+.button-container input, .button-container button { 
+    margin: 5px; padding: 10px 20px; 
+    font-size: 16px; border: none; 
+    border-radius: 5px; cursor: pointer; 
+} 
+
+.button-container input[type="submit"] { 
+    background-color: #4c7bc1; 
+    color: white; 
+} 
+
+.button-container input[type="submit"]:hover{
+    background-color: #4067a1;
+}
+
+.button-container input[type="reset"] { 
+    background-color: #4c7bc1; 
+    color: white; 
+} 
+    
+.button-container input[type="reset"]:hover{
+    background-color: #4067a1;
+}
+
+.button-container button { 
+    background-color: #4c7bc1; 
+    color: white; 
+}
+
+.button-container button:hover{
+    background-color: #4067a1;
+}
