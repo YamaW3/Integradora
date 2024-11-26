@@ -11,12 +11,19 @@ html {
     display: flex;  
     justify-content: space-between;  
     align-items: center;  
-    background-color: #4c7bc1;
+    background-color: #1b4aa200;
     padding: 10px 40px;  
     position: fixed; /* Fija la barra de navegación */  
     width: 100%; /* Asegura que ocupa todo el ancho */  
     top: 0; /* Se posiciona en la parte superior */ 
     z-index: 1000; /* Asegura de que sea mayor que otros elementos */
+}
+
+/* Añadir esta clase para el efecto al hacer scroll */  
+.navbar.scrolled {  
+    background-color: #4c7bc1; /* Cambia el color de fondo */  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.272); /* Añade sombra */  
+    transition: background-color 0.9s, box-shadow 0.7s; /* Transiciones suaves */  
 }
 
 .nav-links {  
@@ -45,11 +52,12 @@ html {
 
 .box2 {  
     position: absolute; /* Permite posicionar el cuadro de manera independiente */  
-    top: 150px; /* Espacio desde la parte superior de la pantalla */  
+    margin-top: 100px;
+    top: auto; /* Espacio desde la parte superior de la pantalla */  
     left: 50%; /* Centrar en la pantalla */  
     transform: translateX(-50%); /* Ajustar el centrado */  
     width: 700px; /* Ancho del cuadro */  
-    height: 470px; /* Ajustar según el contenido */  
+    height: auto; /* Ajustar según el contenido */  
     padding: 50px; /* Espaciado interno */  
     background-color: white; /* Color de fondo */  
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */  
@@ -336,3 +344,46 @@ input[type="submit"]:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
+#box{  
+    position: relative;  
+    color: #fff;  
+    padding: 12em 0 20em 0;  
+    text-align: center;  
+    font-size: 17px;  
+    overflow: hidden; /* Asegura que el contenido no se desborde */  
+}  
+
+#background-video {  
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    width: 100%;  
+    height: 100%;  
+    width: auto;  
+    height: auto;  
+    z-index: -1; /* Asegura que el video quede detrás del contenido */  
+    transform: translate(-50%, -50%);  
+}  
+
+.box {
+    position: absolute; 
+    top: 170px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 90vw; /* Usamos unidades relativas para mejor adaptación */
+    max-width: 700px;
+    height: auto; /* Ajuste automático de altura */
+    padding: 50px; 
+    background-color: white; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+    z-index: 900; 
+    border-radius: 15px;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+    font-size: 45px; /* Usamos unidades relativas para la fuente */
+    font-weight: bold;
+    color: #4c7bc1dd;
+}
