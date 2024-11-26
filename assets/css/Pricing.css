@@ -251,6 +251,19 @@ html {
     transform: translateY(-50%);
 }
 
+.option{
+    color: rgb(86, 86, 86);
+}
+
+.box-content h3 {
+    color: #4377c5;
+}
+
+.box-content label {
+    color: rgb(86, 86, 86);
+    padding-left: 5px;
+}
+
 .Close {
     color: #aaa;
     float: right;
@@ -431,3 +444,4 @@ color: #4c7bc1dd;
         font-size: 45px;
     }
 }
+
