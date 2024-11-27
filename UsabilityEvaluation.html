@@ -20,6 +20,60 @@
         </ul>  
     </nav> 
 
+    <section id="box">
+        <div>
+            <video autoplay muted loop id="background-video">  
+                <source src="/images/background/sky.mp4" type="video/mp4">  
+            </video> 
+        </div>
+    </section>
+
+    <div class="box"> 
+        <p class="text">
+            Evaluate Us
+        </p>
+    </div>
+
+    <section class="box1">
+        <div>
+            <form action="form.php" class="form" method="post" id="form">
+                <header> Usability Evaluation </header>
+        
+                <label for="pregunta" class="box1-text"> Question </label>
+                <input type="text" name="pregunta">
+                <button type="button" onclick="updateField(this)"> Update Question </button>
+        
+                <label for="respuestas" class="box1-text"> Answers </label>
+                <input type="text" name="respuesta1" placeholder="1. ">
+                <input type="text" name="respuesta2" placeholder="2. ">
+                <input type="text" name="respuesta3" placeholder="3. ">
+                <input type="text" name="respuesta4" placeholder="4. ">
+        
+                <fieldset class="box2">
+                    <legend> How easy to use is the main menu? </legend>
+                    
+                    <div class="radio-container">
+                        <input type="radio" name="opcion1" id="muy-facil" value="Muy Facil" checked>
+                        <label for="muy-facil"> Very Easy </label><br>
+            
+                        <input type="radio" name="opcion1" id="facil" value="Facil">
+                        <label for="facil"> Easy </label><br>
+            
+                        <input type="radio" name="opcion1" id="poco-facil" value="Poco facil">
+                        <label for="poco-facil"> Not Easy </label><br>
+                    </div>
+                </fieldset>
+        
+                <div class="button-container">
+                    <button type="button" onclick="addField()"> Add Question </button>
+                    <button type="button" onclick="deleteField()"> Delete Last Question </button>
+                    <input type="submit" name="enviar" id="enviar" value="Save Question" >
+                </div>
+
+            </form>
+        </div>
+    </section>
+
     <footer id="footer" class="footer">
         <ul class="icons">
             <li><a href="https://x.com/byHelPath"><img src="/images/icons/twitter.svg"><span class="label"></span></a></li>
