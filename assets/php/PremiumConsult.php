@@ -73,9 +73,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                    <input type="submit" value="Enviar">
+                    <input type="submit" value="Diagnose">
                     <input type="reset" value="Reset" onclick="resetForm()">
-                    <button class="button-diagnose" type="button" onclick="diagnosticar()">Diagnose</button>
                 </div>
             </div>
         </form>
