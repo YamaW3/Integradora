@@ -230,3 +230,40 @@ overflow: hidden;
     z-index: 900;
     border-radius: 15px;  
 }
+
+@media (max-width: 1024px) {
+    .box2 {
+        width: 600px;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box2 {
+        width: 600px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box2 {
+        width: 300px;
+        padding: 20px;
+    }
+}
+
+h2 {
+    color: #000000c9;
+}
+
+h3 {
+    color: #747474;
+}
+
+p {
+    color: #000000ac;
+}
+
+li {
+    color: #000000ac;
+}
