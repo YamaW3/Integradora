@@ -40,6 +40,7 @@ html {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
     z-index: 900; 
     border-radius: 15px;
+    margin-bottom: auto;
 }
 
 .text {
@@ -174,7 +175,8 @@ html {
 
 .footer{
     position: absolute; /* Permite posicionar el cuadro de manera independiente */  
-    top: 190px; /* Espacio desde la parte superior de la pantalla */  
+    margin-top: 160px;
+    top: auto; /* Espacio desde la parte superior de la pantalla */  
     left: 50%; /* Centrar en la pantalla */  
     transform: translateX(-50%); /* Ajustar el centrado */  
     width: 100%; /* Ancho del cuadro */  
@@ -250,4 +252,3 @@ html {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
