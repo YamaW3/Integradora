@@ -252,3 +252,28 @@ html {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+.div {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si el contenedor tiene altura definida */
+    height: 100%; /* Asegura que el contenedor tenga la altura completa del contenedor padre */
+}
+
+.button-terms {
+    display: inline-block;
+    background-color: #4c7bc1; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.button-terms:hover {
+    background-color: #3b67a0; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+    text-decoration: none; /* Mantener sin subrayado al pasar el ratón */
+}
