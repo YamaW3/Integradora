@@ -16,7 +16,7 @@
             <li><a href="/index.html"> About </a></li>
             <li><a href="/assets/php/FreeConsult.php"> Consult </a></li>  
             <li><a href="/assets/html/Pricing.html"> Pricing </a></li>  
-            <li><a href="/index.html"> Support </a></li>  
+            <li><a href="/AboutUs.html"> About Us </a></li>  
         </ul>  
     </nav> 
 
@@ -32,7 +32,7 @@
         <p class="text">
             Basic Plan
         </p>
-        <a href="/Pricing.html" class="change"> Change Plan </a>
+        <a href="/assets/php/PremiumConsult.php" class="change"> Change Plan </a>
     </div>
     
 
@@ -210,7 +210,7 @@
             <li><a href="https://www.youtube.com/@HELPATH"><img src="/images/icons/youtube.svg"><span class="label"></span></a></li>
         </ul>
         <ul class="copyright">
-            <li> &copy; Helpath. All rights reserved.</li><li><a href="AboutUs.html"> About us </a>  | <a href="UsabilityEvaluation.html">Evaluation </a></li>
+            <li> &copy; Helpath. All rights reserved.</li><li> <a href="UsabilityEvaluation.html">Evaluation </a></li>
         </ul>
     </footer>
 
