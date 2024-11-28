@@ -49,7 +49,7 @@ html {
 }  
 
 .nav-links a:hover {  
-    color: #b0d0ff; 
+    color: #284570; 
     transition-delay: 0.1s; 
 }
 
@@ -365,7 +365,7 @@ input[type="submit"]:hover {
     }
 
     .nav-links a:hover {
-        color: #91acd5; /* Color del texto al pasar el ratón */
+        color: #000000; /* Color del texto al pasar el ratón */
     }
 
     .menu-icon {
