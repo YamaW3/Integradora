@@ -257,10 +257,12 @@ html {
     display: flex; /* Utiliza Flexbox */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente si el contenedor tiene altura definida */
+    gap: 20px; /* Espacio entre botones */
     height: 100%; /* Asegura que el contenedor tenga la altura completa del contenedor padre */
 }
 
 .button-terms {
+    text-align: center;
     display: inline-block;
     background-color: #4c7bc1; /* Color de fondo */
     color: white; /* Color del texto */
@@ -277,3 +279,4 @@ html {
     transform: scale(1.05); /* Efecto de agrandamiento */
     text-decoration: none; /* Mantener sin subrayado al pasar el ratón */
 }
+
