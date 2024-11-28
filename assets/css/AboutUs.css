@@ -507,3 +507,22 @@ html {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+.button1-1 {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si el contenedor tiene altura definida */
+    height: 100%; /* Asegura que el contenedor tenga la altura completa del contenedor padre */
+}
+
+.button1 {
+    display: inline-block; 
+    padding: 15px 25px; 
+    margin: 10px; 
+    font-size: 16px; 
+    color: #fff; 
+    background-color: #4c7bc1dd; 
+    text-decoration: none; 
+    border-radius: 8px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
