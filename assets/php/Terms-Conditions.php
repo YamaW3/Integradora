@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +16,15 @@
         <div class="menu-icon" onclick="toggleMenu()"> ☰ </div>
         <ul class="nav-links" >  
             <li><a href="index.php"> Home </a></li>  
-            <li><a href="index.php"> About </a></li>
-            <li><a href="assets/php/FreeConsult.php"> Consult </a></li>  
+            <li><a href="AboutUs.php"> About Us </a></li> 
             <li><a href="Pricing.html"> Pricing </a></li>  
-            <li><a href="AboutUs.html"> About Us </a></li>  
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <!-- Solo mostrar este enlace si el usuario ha iniciado sesión -->
+                <li><a href="FreeConsult.php">Consult</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            <?php else: ?>
+                <li><a href="SignUp-Login.html">Login</a></li>
+            <?php endif; ?>
         </ul>  
     </nav> 
 
@@ -93,4 +102,3 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
